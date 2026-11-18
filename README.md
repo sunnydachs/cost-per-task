@@ -66,7 +66,7 @@ No task is judged by an LLM, and no task is judged by a human. If the verifier i
 - **tokens per solved task** — total tokens spent on the tasks that ended up solved. This is the headline number.
 - **retry tax** — attempts ÷ solved tasks. 1.0 means everything passed first try; 2.0 means every task needed two tries on average.
 - **tokens per success incl. failed-task waste** — the same ratio but counting tokens burned on tasks that never succeeded. This is the number that shows up on the bill.
-- **total seconds (machine time)** — wall-clock of the whole run. On free tiers this is often the axis that actually binds.
+- **total seconds (machine time)** — wall-clock of the whole run. When the cash cost is not visible, this is often the axis that actually binds.
 
 Transport failures (HTTP 429/503, timeouts) are retried *inside* one attempt and are not counted as task attempts; only verifier failures count. They are still recorded in `transport_errors`.
 
